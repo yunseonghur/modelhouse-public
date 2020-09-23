@@ -1,0 +1,52 @@
+/* // Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap */
+.footer {
+  background-color: #296066;
+  /* position: absolute; */
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  color: #dbdbdb;
+}
+#footer-img {
+  display: inline-block;
+  vertical-align: middle;
+  max-height: inherit;
+  max-width: inherit;
+}
+.helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.footer p {
+  padding: 0;
+  margin: 0;
+  font-size: 8px;
+}
+#manager {
+  color: #296066;
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+  .footer p {
+    font-size: 12px;
+  }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+  .footer p {
+    font-size: 15px;
+  }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+
+ }
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+ }

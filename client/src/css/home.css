@@ -1,0 +1,96 @@
+/* // Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap */
+.home-top {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.bg_img {
+  width: 100%;
+  height: 40vh;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+#home-top-modal {
+  display: none;
+}
+#home-top-row {
+  margin-top: 5%;
+  margin-bottom: 3%;
+}
+/* #home_video {
+  height: 
+} */
+#home-bottom-row {
+  display: none;
+}
+.bottom-item, #home-bottom-modal {
+  border: #d1d1d1 3px solid;
+  padding: 5px;
+  margin: 2%;
+}
+#home-bottom-modal {
+  margin: 2% 0 10% 0;
+}
+.home-bottom-modal-item1 {
+  width: 62.7%;
+  float: left;
+}
+.home-bottom-modal-item2 {
+  width: 37.3%;
+  float: left;
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+  .bg_img {
+    height: auto;
+  }
+  #home-top-modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15%;
+    height: auto;
+    display: inherit;
+  }
+  #home-middle-row {
+    margin-bottom: 0;
+  }
+  #home_video {
+    height: 67%;
+  }
+  #home-bottom-row {
+    text-align: center;
+    padding-top: 10px;
+    font-size: 11pt;
+    font-weight: 500;
+    margin-bottom: 5%;
+    display: flex;
+  }
+  .bottom-item {
+    margin: 0;
+  }
+  #home-bottom-modal {
+    display: none;
+  }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+  #home-bottom-row {
+    font-size: 15pt;
+  }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  #home-top-row {
+    margin-right: 5%;
+  }
+ }
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+ }
