@@ -26,3 +26,7 @@ npm start
 ## Status
 This project is completed. You can check out the website from the link:
 https://www.cybermodel-house.com/
+
+
+
+* Commit history has been deleted due to sensitive data.
