@@ -1,5 +1,5 @@
 # Yongin Bopyeong Presale Condos
-This is an web app built for my client, who is a realtor in Korea. She wanted a website that can promote presale condos sales.
+This is a web app built for my client, who is a realtor in Korea. She wanted a website that can promote presale condos sales.
 The web app provides potential customers to acquire information about the presale project and to register themselves for consulting with the realtor.
 
 
