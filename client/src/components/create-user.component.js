@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-// import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 import '../css/create-user.css';
 import { Table, Form } from 'react-bootstrap';
-// import DaumPostcode from 'react-daum-postcode';
 
 
 export default class CreateUser extends Component {
@@ -28,7 +26,6 @@ export default class CreateUser extends Component {
       phone2: '',
       phone3: '',
       address: '',
-      // dob: 'null',
       dob: '',
       gender: '',
       size: '',
@@ -67,23 +64,11 @@ export default class CreateUser extends Component {
     });
   }
 
-  // onChangeAddress(fullAddress) {
-  //   this.setState({
-  //     address: fullAddress
-  //   });
-  // }
-
   onChangeDob(e) {
     this.setState({
       dob: e.target.value
     });
   }
-
-  // onChangeDob(date) {
-  //   this.setState({
-  //     dob: date
-  //   });
-  // }
 
   onChangeGender(e) {
     this.setState({
@@ -118,11 +103,8 @@ export default class CreateUser extends Component {
       priority: this.state.priority
     }
 
-    // console.log(user);
-
     await axios.post('/users/add', user)
       .then(alert("고객등록 완료"));
-      // .then(res => console.log(res.data));
     
     this.setState({
       username: '',
@@ -130,41 +112,12 @@ export default class CreateUser extends Component {
       phone2: '',
       phone3: '',
       address: '',
-      // dob: null,
       dob: '',
       gender: '',
       size: '',
       priority: ''
     });
   }
-
-  // handleComplete = (data) => {
-  //   let fullAddress = data.address;
-  //   let extraAddress = ''; 
-    
-  //   if (data.addressType === 'R') {
-  //     if (data.bname !== '') {
-  //       extraAddress += data.bname;
-  //     }
-  //     if (data.buildingName !== '') {
-  //       extraAddress += (extraAddress !== '' ? `, ${data.buildingName}` : data.buildingName);
-  //     }
-  //     fullAddress += (extraAddress !== '' ? ` (${extraAddress})` : '');
-  //   }
-  //   console.log(fullAddress);  // e.g. '경기 의왕시 백운호수로1길 9 (학의동, 백운밸리 풍경채 레이크포레 4단지 아파트)'
-
-  //   document.getElementById("sample3_extraAddress").value = "("+extraAddress+")";
-  //   // document.getElementById('sample3_postcode').value = data.zonecode;
-  //   document.getElementById("sample3_address").value = data.address;
-
-  //   this.onChangeAddress(fullAddress);
-  // } 
-
-  // showDaum = () => {
-  //   this.setState({
-  //     searchClicked: !this.state.searchClicked
-  //   });
-  // }
 
   render() {
     return (
@@ -245,23 +198,6 @@ export default class CreateUser extends Component {
                       placeholder="시/군/구까지만 입력하세요" 
                       style={{width:"275px"}}
                     />
-                    {/* <input type="text" id="sample3_postcode" className="form-control" placeholder="우편번호" style={{width:"80px", display:"inline", padding:"12px", margin:"0 6px 6px 0"}} />
-                    <button type="button" className="btn btn-secondary" onClick={this.showDaum} style={{verticalAlign:"baseline"}}>우편번호 찾기</button>
-                    <button type="button" className="btn btn-secondary" onClick={this.showDaum} style={{verticalAlign:"baseline"}} style={{margin:"0 6px 6px 0"}}>주소 찾기</button>
-                    {
-                      this.state.searchClicked ? 
-                        <DaumPostcode
-                        onComplete={this.handleComplete}
-                        autoClose="true"
-                        /> 
-                        : 
-                        <></>
-                    }
-                    <input type="text" id="sample3_address" className="form-control" required placeholder="기본주소 (동까지만 입력)" style={{width:"300px", marginBottom:"6px"}} />
-                    <input type="text" id="sample3_extraAddress" className="form-control" placeholder="참고사항" style={{width:"300px"}} />
-
-                    <div id="wrap" style={{display:"none", border:"1px solid", width:"500px", height:"300px", margin:"5px 0", position:"relative"}}>
-                    </div> */}
                   </td>
                 </tr>
                 <tr>
@@ -276,18 +212,6 @@ export default class CreateUser extends Component {
                         placeholder="년/월/일 순서대로 입력하세요" 
                         style={{width:"275px"}}
                       />
-                    {/* <div>
-                      <DatePicker
-                        selected={this.state.dob}
-                        onChange={this.onChangeDob}
-                        required
-                        peekNextMonth
-                        showMonthDropdown
-                        showYearDropdown
-                        dropdownMode="select"
-                        placeholderText="MM/DD/YYYY"
-                      />
-                    </div> */}
                   </td>
                 </tr>
                 <tr>

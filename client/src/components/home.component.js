@@ -6,7 +6,6 @@ import home_middle from '../assets/images/home_middle.png'
 import home_bottom1 from '../assets/images/home_bottom1.png'
 import home_bottom2 from '../assets/images/home_bottom2.png'
 import view_cybermodelhouse from '../assets/images/view_cybermodelhouse.png'
-// import Footer from './footer.component';
 
 
 export default class Home extends Component {

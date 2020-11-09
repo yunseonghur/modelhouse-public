@@ -19,9 +19,6 @@
   margin-top: 5%;
   margin-bottom: 3%;
 }
-/* #home_video {
-  height: 
-} */
 #home-bottom-row {
   display: none;
 }
@@ -89,8 +86,4 @@
   #home-top-row {
     margin-right: 5%;
   }
- }
-
-/* // Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) { 
  }

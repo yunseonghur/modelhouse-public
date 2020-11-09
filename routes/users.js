@@ -12,7 +12,6 @@ router.route('/add').post((req, res) => {
   const username = req.body.username;
   const phone = req.body.phone1+"-"+req.body.phone2+"-"+req.body.phone3;
   const address = req.body.address;
-  // const dob = Date.parse(req.body.dob);
   const dob = req.body.dob;
   const gender = req.body.gender;
   const size = req.body.size;

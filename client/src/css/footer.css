@@ -2,7 +2,6 @@
 // No media query for `xs` since this is the default in Bootstrap */
 .footer {
   background-color: #296066;
-  /* position: absolute; */
   bottom: 0;
   width: 100%;
   padding: 1rem;
@@ -41,12 +40,3 @@
     font-size: 15px;
   }
 }
-
-/* // Large devices (desktops, 992px and up) */
-@media (min-width: 992px) { 
-
- }
-
-/* // Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) { 
- }

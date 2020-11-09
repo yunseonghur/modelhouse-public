@@ -46,7 +46,6 @@ function App() {
       <Route path="/sub4_1" component={Sub4_1} />
       <Route path="/sub4_2" component={Sub4_2} />
       <Route path="/user" component={CreateUser} />
-      {/* <Route path="/admin" exact component={UserList} /> */}
       <Footer />
     </Router>
   );

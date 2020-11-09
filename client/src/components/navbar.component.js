@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import { Link } from 'react-router-dom';
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import '../css/navbar.css';
 import logo from '../assets/images/logo.png';
@@ -11,7 +10,6 @@ export default function Navbar0() {
   const [shouldOpen2, show2] = useState(false);
   const [shouldOpen3, show3] = useState(false);
   const [shouldOpen4, show4] = useState(false);
-  // const [shouldOpen5, show5] = useState(false);
 
   return (
     <Navbar collapseOnSelect sticky="top" expand="lg" bg="white">
@@ -44,9 +42,6 @@ export default function Navbar0() {
             <NavDropdown.Item href="/sub4_1" className="dropdown-top">입주자 공고모집</NavDropdown.Item>
             <NavDropdown.Item href="/sub4_2">당첨자 서류제출</NavDropdown.Item>
           </NavDropdown>
-          {/* <NavDropdown title="관심고객등록" id="collasible-nav-dropdown" onMouseEnter={()=>show5(true)} onMouseLeave={()=>show5(false)} show={shouldOpen5}>
-            <NavDropdown.Item href="/user" className="dropdown-top">관심고객등록</NavDropdown.Item>
-          </NavDropdown> */}
           <Nav.Link href="/user" className="navlink-bottom">관심고객등록</Nav.Link>
           <div className="navbar-text">
             <b>
