@@ -2,6 +2,16 @@ const router = require('express').Router();
 let User = require('../models/user.model');
 const nodemailer = require('nodemailer');
 
+require('dotenv').config();
+
+const express = require('express');
+const app = express();
+const bodyParser = require('body-parser');
+const { google } = require("googleapis");
+const OAuth2 = google.auth.OAuth2;
+
+app.use(bodyParser.json());
+
 router.route('/').get((req, res) => {
   User.find()
     .then(users => res.json(users))
@@ -40,20 +50,32 @@ router.route('/add').post((req, res) => {
       <li>우선순위: ${req.body.priority}</li>
     </ul>
   `;
-  let transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 465,
-    secure: true, // true for 465, false for other ports
-    auth: {
-      user: process.env.ADMIN_EMAIL, // generated ethereal user
-      pass: process.env.ADMIN_PWD, // generated ethereal password
-    },
+
+  const myOAuth2Client = new OAuth2(
+    process.env.CLIENT_ID,
+    process.env.CLIENT_SECRET,
+    "https://developers.google.com/oauthplayground"
+  )
+  myOAuth2Client.setCredentials({
+    refresh_token:process.env.REFRESH_TOKEN
   });
+  const myAccessToken = myOAuth2Client.getAccessToken()
+
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+         type: "OAuth2",
+         user: process.env.EMAIL, 
+         clientId: process.env.CLIENT_ID,
+         clientSecret: process.env.CLIENT_SECRET,
+         refreshToken: process.env.REFRESH_TOKEN,
+         accessToken: myAccessToken 
+  }});
 
   // send mail with defined transport object
-  let info = transporter.sendMail({
+  transporter.sendMail({
     from: username, // sender address
-    to: process.env.ADMIN_EMAIL, // list of receivers
+    to: process.env.EMAIL, // receiver
     subject: "보평역 서희스타힐스 관심고객 등록알림", // Subject line
     html: output, // html body
   });
