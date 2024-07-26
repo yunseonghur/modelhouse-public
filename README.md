@@ -25,7 +25,7 @@ npm start
 
 ## Status
 This project is completed. You can check out the website from the link:
-https://www.cybermodel-house.com/
+https://cybermodel-house.herokuapp.com/
 
 
 
